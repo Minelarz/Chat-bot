@@ -1,5 +1,5 @@
-﻿@using AzureOpenAiChatClient.Data
-@using AzureOpenAiChatClient.Services
+﻿@using AzureOpenAIChatClient.Veri
+@using AzureOpenAIChatClient.Hizmetler
 @inject IJSRuntime JsRuntime
 @inject ChatService ChatService
 
@@ -10,15 +10,15 @@
 
 
 <div id="scrollbox">
-    @foreach (var item in _messages)
+    @foreach (var öğe in _mesajlar)
     {
-        if (item.IsRequest)
+        @if (öğe.IsRequest)
         {
             <div class="sent p-2 m-0 position-relative d-flex justify-content-end">
                 <p class="">@item.Body</p>
             </div>
         }
-        else
+        Servicce ices
         {
             <div class="received p-2 m-0 position-relative d-flex justify-content-start">
                 <p class="">@item.Body</p>
