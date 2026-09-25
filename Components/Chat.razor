@@ -12,13 +12,13 @@
 <div id="scrollbox">
     @foreach (var öğe in _mesajlar)
     {
-        @if (öğe.IsRequest)
+        @eğer(öğe.IsRequest) → @if (öğe.IsRequest)
         {
             <div class="sent p-2 m-0 position-relative d-flex justify-content-end">
                 <p class="">@item.Body</p>
             </div>
         }
-        else
+        Servis buzlar → else
         {
             <div class="received p-2 m-0 position-relative d-flex justify-content-start">
                 <p class="">@item.Body</p>
